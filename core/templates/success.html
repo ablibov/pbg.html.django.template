@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Success</title>
+<link rel="icon" href="{% static 'img/favicon.png' %}">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Unbounded:wght@200..900&family=Mulish:wght@200..900&display=swap');
+
+/* ===== BACKGROUND ===== */
+
+body, html {
+    margin:0;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: linear-gradient(270deg, #fb3f3f, #ff6b6b, #ff3c3c);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease infinite;
+}
+
+/* ===== GLASS CARD ===== */
+
+.success-card{
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    background: rgba(255,255,255,0.18);
+    border:1px solid rgba(255,255,255,0.4);
+
+    border-radius:20px;
+
+    padding:60px 80px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.25),
+    inset 0 0 20px rgba(255,255,255,0.2);
+
+    animation: fadeUp .7s ease;
+}
+
+/* ===== CHECK IMAGE ===== */
+
+.check {
+    width: 80px;
+    margin-bottom: 20px;
+
+    animation: popIn 0.5s ease;
+
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+}
+
+/* ===== TEXT ===== */
+
+.title{
+    font-family:'Inspiration', sans-serif;
+    font-size:65px;
+    color:white;
+    margin-bottom:15px;
+
+    animation: fadeUp .6s ease .2s backwards;
+}
+
+.subtitle{
+    font-family:'Mulish', sans-serif;
+    font-size:18px;
+    color:white;
+    opacity:0.9;
+    margin-bottom:35px;
+
+    animation: fadeUp .6s ease .4s backwards;
+}
+
+/* ===== BUTTON ===== */
+
+.btn{
+    font-family:'Unbounded', sans-serif;
+
+    padding:12px 30px;
+    font-size:16px;
+
+    border-radius:12px;
+
+    border:2px solid white;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(8px);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition: all .35s ease;
+
+    animation: fadeUp .6s ease .6s backwards;
+}
+
+.btn:hover{
+    background:white;
+    color:#fb3f3f;
+    transform:translateY(-3px);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    60% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="success-card">
+
+<img src="{% static 'img/galochka.png' %}" class="check">
+
+<h1 class="title">Success</h1>
+
+<p class="subtitle">
+Your request has been successfully submitted and is waiting for moderation.
+</p>
+
+<a href="/">
+<button class="btn">
+Back to Home
+</button>
+</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="favicon.png">
+
+</head>
+
+<body>
+    <h1 class="maintxt">Moderation</h1>
+<div class="mainbtncontent">
+    <button class="main_btn" id="pendingbtn">Pending</button>
+    <button class="main_btn" id="declinedbtn">Declined</button>
+    <button class="main_btn" id="aprovedbtn">Aproved</button>
+<br>
+    <div id="firstcontent" class="frst">
+        <div class="stsdiv">
+            <h1 class="name">Aykhan Garibli</h1>
+            <h5 class="email">Email: example@a.com</h5>
+
+            <div class="dropdown">
+                <button class="admbtn_pnd dropbtn">Pending</button>
+                <div class="ststus">
+                    <button class="aprvd">Approve</button>
+                    <button class="dclnd">Decline</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="secondcontent">
+        <div class="stsdiv">
+            <h1 class="name"><a style="text-decoration: none; color: #000000;" href="./paveldurov.html">Pavel Durov</a></h1>
+            <h5 class="email">Email: durov@telegram.org</h5>
+            <div class="dropdown">            
+                <button id="stabtn" class="admbtn_apr" style="text-align: center !important;">Aproved</button>
+
+            <div class="ststus">
+<button class="dclnd">Decline</button>
+</div>
+        </div>
+    </div>
+    </div>
+
+    <div id="thirdcontent">
+        <div class="stsdiv">
+            <h1 class="name">Elchin Aliev</h1>
+            <h5 class="email">Email: elchin@a.com</h5>
+            <div class="dropdown">
+            <button id="stabtn" class="admbtn_dcl" style="text-align: center !important;">Declined</button>
+                    <div class="ststus">
+<button class="aprvd">Approve</button>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <script>
+        let pendingbtn = document.getElementById("pendingbtn");
+        let declinedbtn = document.getElementById("declinedbtn");
+        let aprovedbtn = document.getElementById("aprovedbtn");
+        let firstcontent = document.getElementById("firstcontent");
+        let secondcontent = document.getElementById("secondcontent");
+        let thirdcontent = document.getElementById("thirdcontent");
+
+        pendingbtn.addEventListener("click", () => {
+            firstcontent.style.display = "block"
+            thirdcontent.style.display = "none"
+            secondcontent.style.display = "none"
+        });
+        declinedbtn.addEventListener("click", () => {
+            firstcontent.style.display = "none"
+            thirdcontent.style.display = "block"
+            secondcontent.style.display = "none"
+        });
+        aprovedbtn.addEventListener("click", () => {
+            firstcontent.style.display = "none"
+            thirdcontent.style.display = "none"
+            secondcontent.style.display = "block"
+        });
+    </script>
+</body>
+
+</html>

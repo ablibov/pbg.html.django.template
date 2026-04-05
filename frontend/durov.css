@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inspiration&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+
+.avatar {
+    border-radius: 150px;
+}
+
+.name {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.maintxt {
+    font-family: 'Inspiration', sans-serif;
+    font-size: 55px;
+    text-align: center;
+}
+
+body, html {
+    background: #fb3f3f;
+    background: -webkit-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: -moz-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FB3F3F", endColorstr="#FC4646", GradientType=0);
+}
+
+.about {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 25px 30px 25px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    align-items: start !important;
+}
+
+.aboutmore {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 25px 30px 25px;
+    margin: 10px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+}
+
+main {
+    justify-content: space-around;
+    display: flex;
+}

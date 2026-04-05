@@ -1,0 +1,134 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.first_name}} {{user.last_name}}</title>
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+</head>
+
+<body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inspiration&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+}
+
+/* TITLE */
+.maintxt {
+    font-family: 'Inspiration', sans-serif;
+    font-size: 55px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+/* AVATAR */
+.avatar {
+    display: block;
+    margin: 20px auto;
+    border: solid rgb(223, 225, 235) 2px;
+    border-radius: 150px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.about {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 30px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* NAME */
+.name {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admbtn_apr {
+    background: rgba(36,226,80,.25);
+    border: 1px solid rgba(36,226,80,.6);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Unbounded', sans-serif;
+    color: #073b0f;
+    cursor: pointer;
+    margin: 5px;
+    transition: .2s;
+}
+
+.admbtn_apr:hover {
+    transform: scale(1.05);
+}
+
+.dclnd {
+    background: rgba(226,36,36,.25);
+    border: 1px solid rgba(226,36,36,.6);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Unbounded', sans-serif;
+    color: #4b0000;
+    cursor: pointer;
+    margin: 5px;
+    transition: .2s;
+}
+
+.dclnd:hover {
+    transform: scale(1.05);
+}
+
+</style>
+
+<h1 class="maintxt">Information</h1>
+
+<img class="avatar" src="{{user.avatar.url}}" alt="">
+
+<main>
+    <div class="about">
+        <h1 class="name">{{user.first_name}} {{user.last_name}}</h1>
+        <p>Email: {{user.email}}</p>
+        <p>Phone: {{user.phone}}</p>
+        <p>Message: {{user.message}}</p>
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+            {% if user.status == "Accepted" %}
+            <button class="admbtn_apr">Decline</button>
+            {% elif user.status == "Declined" %}
+            <span class="dclnd">Declined</span>
+            {% else %}
+            <span class="admbtn_pnd">Pending</span>
+            {% endif %}
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

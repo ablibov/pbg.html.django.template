@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inspiration&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+
+body, html {
+    background: #fb3f3f;
+    background: -webkit-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: -moz-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FB3F3F", endColorstr="#FC4646", GradientType=0);
+}
+
+.maintxt {
+    font-family: 'Inspiration', sans-serif;
+    font-size: 55px;
+    text-align: center;
+}
+
+.signup_form {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.inpudivs {
+    margin: 10px;
+}
+
+input {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    padding: 5px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: -moz-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FB3F3F", endColorstr="#FC4646", GradientType=0);
+    border: 2px black solid;
+        transition: 0.5s;
+
+}
+
+input:hover {
+    transform: translateY(-3px);
+}
+
+.sbnbtn {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    padding: 5px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: -moz-linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    background: linear-gradient(319deg, rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FB3F3F", endColorstr="#FC4646", GradientType=0);
+    border: 2px black solid;
+        transition: 0.5s;
+}
+
+.sbnbtn:hover {
+    transform: translateY(-3px);
+    background: black;
+color: #fb3f3f;
+color: linear-gradient(319deg,rgba(251, 63, 63, 1) 0%, rgba(252, 70, 70, 1) 100%);
+}
